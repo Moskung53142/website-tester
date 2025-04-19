@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta property="og:title" content="ชื่อเว็บเท่ ๆ">
+    <meta property="og:description" content="คำอธิบายเว็บ">
+    <meta property="og:image" content=""> <!-- ว่างไว้ หรือไม่ใส่เลย -->
+    <title>test system</title>
+    <style>
+        .hide_content{
+            display : none;
+        }
+        .show_content{
+            display : block;
+        }
+
+        body{
+            margin: 0;
+            height: 90vh;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            background-color: pink;
+        }
+
+        .btnSize{
+            width : 400px;
+            height: 100px;
+            background-color: green;
+            color: yellow;
+            font-size: 50px;
+            border-style: solid;
+            border-radius: 16px;
+        }
+
+        p{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .container{
+            display:flex;
+            flex-direction : column; 
+            align-items: center;
+            gap: 2px;
+        }
+
+        #ghost{
+            width : 100vw;
+            height : 100vh;
+            object-fit: cover;  
+            position : fixed;
+            top : 0;
+            left : 0;        
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <p class = "hide_content show_content">อย่ากดปุ่มนี้นะ!!!<br></p>
+        <button onclick = "showcontent()" class="btnSize hide_content show_content">กดฉันสิ!</button>
+    </div>
+
+    <img src = "scary-haunted.gif" id = "ghost" class = "hide_content">
+    <audio src = "jumpscare_sound.mp3" id = "ghost_sound"></audio>
+    <script src = "jumpscare.js"></script>
+</body>
+</html>
